@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link href="mecss/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="mecss/font-awesome/css/font-awesome.min.css" rel="stylesheet" />	
+	<link href="mecss/bootkit/css/bootkit.css" rel="stylesheet" />	
+	<link href="mecss/style.css" rel="stylesheet" />
+	<style type="text/css">
+		.sidebar .sidebar-footer{height:0;}
+		.table thead tr th,.table tbody tr td{text-align: center;}
+		.table tbody tr td input{border:none;text-align: center;outline: none;}
+		.btn{margin:0 auto;}
+		.pull-left ol li{color:#c3c3c3;}
+		ul,li{list-style: none;}
+		.main{padding-top:60px;}
+		.programa{width:100%;min-height:40px;padding:0px;margin-bottom:20px;border-bottom:1px solid #fff;margin-top:-5px; }
+		.programa li{float: left;min-width:10px;border-right:1px solid #fff;border-top:2px solid #ecedf0;padding:10px 30px;cursor:default;}
+		.programa .active{border-top:2px solid #ffbf00;background:#fff;position: relative;}
+		.programa li i{position: absolute;right:5px;top:2px;cursor: pointer;}
+	</style>	
+</head>
+<body>
+	<!-- Start: Header -->
+	
+	<!-- End: Header -->
+	<!-- Start: Content -->
+	<div class="container-fluid content">	
+		<div class="row">
+			<!-- Sidebar -->
+			<div class="sidebar">
+				<div class="sidebar-collapse">
+					<div class="sidebar-menu">						
+						<nav id="menu" class="nav-main" role="navigation">
+							<ul class="nav nav-sidebar">
+								<div class="panel-body text-center">
+									<div class="bk-avatar">
+										<img src="img/avatar.jpg" class="img-circle bk-img-60" alt="" />
+									</div>
+									<div class="bk-padding-top-10">
+										<i class="fa fa-circle text-success"></i> <small>Administrator</small>
+									</div>
+								</div>
+								<div class="divider2"></div>
+								<li class="active">
+									<a class="aclick" name="index_1.html">
+										<span>首页</span>
+									</a>
+								</li>
+								<li class="nav-parent">
+									<a class="nav-prompt">
+										<span>语文学习</span>
+									</a>
+									<ul class="nav nav-children">
+										<li><a class="aclick" name="apply-for-school.html"><span class="text">申请学校</span></a></li>
+									</ul>
+								</li>
+								<li>
+									<a class="aclick" name="expert-team.html">
+										<span>专家团队</span>
+									</a>
+								</li>
+								<li>
+									<a class="aclick" name="news.html">
+										<span>新闻动态</span>
+									</a>
+								</li>
+								<li>
+									<a class="aclick" name="table.html">
+										<span>专题活动</span>
+									</a>
+								</li>
+								<li class="nav-parent">
+									<a class="nav-prompt">
+										<span>教学资源</span>
+									</a>
+									<ul class="nav nav-children">
+										<li><a class="aclick" name=""><span class="text">教学设计</span></a></li>
+										<li><a class="aclick" name="chart-xchart.html"><span class="text">教学感悟</span></a></li>
+										<li><a class="aclick" name="chart-other.html"><span class="text">课程视频</span></a></li>
+									</ul>
+								</li>
+								<li>
+									<a class="aclick" name="1.html">
+										<span>杂志</span>
+									</a>
+								</li>
+								<li class="nav-parent">
+									<a>
+										<span>我们是谁</span>
+									</a>
+									<ul class="nav nav-children">
+										<li><a class="aclick" name="ui-progress-bars.html"><span class="text">常见问题</span></a></li>
+										<li><a class="aclick" name="ui-nestable-list.html"><span class="text">用户反馈</span></a></li>
+									</ul>
+								</li>
+								<li>
+									<a class="aclick" name="widgets.html">
+										<span>个人设置</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<!-- End Sidebar -->
+			<!-- Main Page -->
+			<div class="main ">
+				<!-- Page Header -->
+				<div class="page-header">
+					<div class="pull-left">
+						<ol class="breadcrumb visible-sm visible-md visible-lg">
+							<li><a href="public.html"><i class="icon fa fa-home"></i>Home</a></li>
+							<li class="active">首页</li>
+						</ol>						
+					</div>
+					<div class="pull-right">
+						<!-- <h2>申请学校</h2> -->
+						<a href="page-login.html"><i class="fa fa-power-off"></i> Logout</a>
+					</div>					
+				</div>
+				<ul class="programa">
+					<!-- <li class="active" onclick="indexclick(this)"><i class="fa fa-times" onclick="closeclick(this)"></i>首页</li> -->
+				</ul>
+				<!-- <iframe frameborder="0" marginheight="0" marginwidth="0" border="0" id="alimamaifrm" name="alimamaifrm" scrolling="yes" height="550px" width="100%" src="index.html"></iframe> -->
+				<!-- End Page Header -->								
+			</div>
+			<!-- End Main Page -->
+		</div>
+	</div><!--/container-->		
+	<div class="clearfix"></div>						
+	<script src="mejs/jquery.min.js"></script>	
+	<script src="mejs/core.min.js"></script>
+	<script src="mejs/public.js"></script>
+	<style type="text/css">
+		iframe{display: none;}
+	</style>
+	<script type="text/javascript">
+
+		var number=0;
+		$('.nav-sidebar li .aclick').click(function(){
+			var start=false;
+			var src=$(this).attr('name');
+			var html=$(this).html();
+			$('.main iframe').each(function(){
+				var src1=$(this).attr('src');
+				if(src1==src){
+					start=true;
+					$('iframe').each(function(){
+						$(this).css('display','none');
+					})
+					$(this).css('display','block');
+					var index_1=$(this).index();
+					$('.programa li').each(function(){
+						$(this).removeClass('active');
+					})
+					
+					$('.programa li').eq(index_1 - 2).addClass('active');
+				}
+			});
+			
+			if(!start){
+				$('iframe').each(function(){
+					$(this).css('display','none');
+				})
+				$('.programa li').each(function(){
+					$(this).removeClass('active');
+				})
+				$('.programa').append('<li class="active" onclick="indexclick(this)"><i class="fa fa-times" onclick="closeclick(this)"></i>'+html+'</li>');
+				$('.main').append('<iframe frameborder="0" marginheight="0" marginwidth="0" border="0" name="alimamaifrm" scrolling="yes" height="550px" width="100%" src="'+src+'" id="iframe_'+number+'" ></iframe>');
+				$('.main iframe:last').css('display','block');
+				number++;
+
+
+			}
+			setTimeout(function(){
+				var btn=$('#iframe_0').contents().find('a.btn-close');
+				btn.css('background','red');
+				console.log($('#iframe_0').contents().find('a.btn-close'));
+			},2000)
+			
+			
+
+		})
+		
+
+
+	</script>
+</body>
+</html>

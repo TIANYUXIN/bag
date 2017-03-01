@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>专家团队</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link href="mecss/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="mecss/font-awesome/css/font-awesome.min.css" rel="stylesheet" />	
+	<link href="mecss/bootkit/css/bootkit.css" rel="stylesheet" />	
+	<link href="mecss/style.css" rel="stylesheet" />
+	<style type="text/css">
+		.panel .panel-heading .panel-actions a{color:#fff;margin-right:20px;}
+		.table tbody img{max-height:80px;}
+		.imgbox{width:200px;height:200px;background:#f5f5f5;text-align: center;margin:0 auto;}
+		.imgbox div{padding-top:40px;}
+		.form-group{margin-top:20px;height:40px; }
+		.form-group label{line-height:34px;text-align: right;}
+	</style>
+</head>
+<body>
+	<div class="row mask-prompt active-select">		
+		<div class="col-lg-12">
+			<div class="panel">
+				<div class="panel-heading bk-bg-primary">
+					<h6><i class="fa fa-table red"></i><span class="break"></span>编辑页面</h6>
+					<div class="panel-actions">
+						<a class="btn-setting">新增</a>
+						<a class="btn-minimize">删除</a>
+						<a class="btn-close" id="btn-close-one"><i class="fa fa-times"></i></a>
+					</div>
+				</div>
+				<div class="panel-body">	
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							  <thead>
+							  	<tr>
+							  		<th><input type="checkbox" name=""></th>
+							  		<th>教师姓名</th>
+							  		<th>教师头像</th>
+							  		<th>操作</th>
+							  	</tr>
+							  </thead>
+							  <tbody>
+							  	<tr>
+							  		<td><input type="checkbox" name=""></td>
+							  		<td>周妍</td>
+							  		<td><img src="img/avatar.jpg"></td>
+							  		<td><a class="to-view">编辑</a></td>
+							  	</tr>
+							  	<tr>
+							  		<td><input type="checkbox" name=""></td>
+							  		<td>周妍</td>
+							  		<td><img src="img/avatar.jpg"></td>
+							  		<td><a class="to-view">编辑</a></td>
+							  	</tr>
+							  	<tr>
+							  		<td><input type="checkbox" name=""></td>
+							  		<td>周妍</td>
+							  		<td><img src="img/avatar.jpg"></td>
+							  		<td><a class="to-view">编辑</a></td>
+							  	</tr>
+							  	<tr>
+							  		<td><input type="checkbox" name=""></td>
+							  		<td>周妍</td>
+							  		<td><img src="img/avatar.jpg"></td>
+							  		<td><a class="to-view">编辑</a></td>
+							  	</tr>
+							  </tbody>
+						</table>
+					</div>
+					<div class="row" style="text-align:center;margin-top:30px;">
+						<input type="button" class="btn btn-primary button-next pull-center" name="next" value="保存并发布">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="mejs/jquery.min.js"></script>	
+<script src="mejs/core.min.js"></script>
+<script src="mejs/public.js"></script>
+<script type="text/javascript">
+	$('.btn-setting,.to-view').click(function(){
+		var html='<div class="imgbox">'
+					+'<div>上传教师图片</div>'
+					+'<div>支持png，jpg图片</div>'
+				+'</div>'
+				+'<div class="form-group">'
+					+'<label class="col-sm-3 control-label">教师姓名</label>'
+					+'<div class="col-sm-9">'
+						+'<input type="text" class="form-control">'
+					+'</div>'
+				+'</div>'
+				+'<div class="row" style="text-align:center;margin-top:30px;">'
+					+'<input type="button" class="btn btn-primary button-next pull-center" name="next" value="保存">'
+				+'</div>';
+		maskbox('信息编辑',html);
+		$('.theme-mask .col-lg-12').css('width','60%');
+	});
+</script>
+</html>
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>专家团队</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link href="mecss/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="mecss/font-awesome/css/font-awesome.min.css" rel="stylesheet" />	
+	<link href="mecss/bootkit/css/bootkit.css" rel="stylesheet" />	
+	<link href="mecss/style.css" rel="stylesheet" />
+	<style type="text/css">
+		.panel .panel-heading .panel-actions a{color:#fff;margin-right:20px;}
+		.panel-heading select{width:100px;border-radius:2px;padding:4px 5px;color:#515151;}
+		.form-group{height:40px;}
+		.form-group select{padding: 6px 12px;}
+		.control-label{text-align:right;line-height:34px;}
+		.upload-pictures .upload-pictures-box{width:100px;height:100px;background:#f5f5f5;font-size:40px;color:#ccc;line-height:100px;text-align: center;}
+	</style>
+</head>
+<body>
+	<div class="row mask-prompt active-select">		
+		<div class="col-lg-12">
+			<div class="panel">
+				<div class="panel-heading bk-bg-primary">
+					<h6><i class="fa fa-table red"></i><span class="break"></span>编辑页面</h6>
+					<div class="panel-actions">
+						<a href="" class="btn-close"><i class="fa fa-times"></i></a>
+					</div>
+				</div>
+				<div class="panel-body">	
+					<div class="inform-responsive">
+						<div class="form-group" style="height:100px; ">
+							<div class="upload-pictures">
+								<label class="col-sm-3 control-label">上传专家图片</label>
+								<div class="col-sm-9">
+									<div class="upload-pictures-box">+</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">专家姓名</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="input-small">所属类别</label>
+							<div class="col-sm-9">
+								<select style="width:100%; ">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">单位头衔</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" maxlength="30">
+								<div>限30字以内</div>
+							</div> 
+
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">简介</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" rows="3" maxlength="500"></textarea>
+								<div>限500字以内</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">历年成果</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" rows="3" maxlength="500"></textarea>
+								<div>限500字以内</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="text-align:right;margin-top:30px;">
+						<input type="button" class="btn btn-primary button-next pull-center" name="next" value="保存">
+						<input type="button" class="btn btn-primary button-next pull-center" name="next" value="保存并发布">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>	
+</html>
+

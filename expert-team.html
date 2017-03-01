@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>专家团队</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link href="mecss/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="mecss/font-awesome/css/font-awesome.min.css" rel="stylesheet" />	
+	<link href="mecss/bootkit/css/bootkit.css" rel="stylesheet" />	
+	<link href="mecss/style.css" rel="stylesheet" />
+	<style type="text/css">
+		.panel .panel-heading .panel-actions a{color:#fff;margin-right:20px;}
+		.panel-heading select{width:100px;border-radius:2px;padding:4px 5px;color:#515151;}
+		.compile{color:#5cb85c;cursor: pointer;}
+		.compile:hover{text-decoration:underline;color:#515151;}
+		.team-members{color:#5cb85c;cursor: pointer;}
+		.team-members:hover{text-decoration:underline;color:#515151;}
+		.norelease{color:red;}
+		body,html,.row-box,.col-lg-12,.row,.panel,iframe{height: 100%;}
+		.panel{height: 100%;}
+	</style>
+</head>
+<body>
+	<div class="row-box">
+		<div class="row row-compile">		
+			<div class="col-lg-12">
+				<div class="panel">
+					<div class="panel-heading bk-bg-primary">
+						<h6><i class="fa fa-table red"></i><span class="break"></span><select>
+							<option>选择专家类别</option>
+							<option>专家顾问</option>
+							<option>卓越校长</option>
+							<option>资深教研员</option>
+							<option>名师工作室</option>
+						</select></h6>
+						<div class="panel-actions">
+							<a class="btn-setting">新增</a>
+							<a class="btn-minimize">删除</a>
+							<a class="btn-close"><i class="fa fa-times"></i></a>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="navbar-right">					
+							<form class="search navbar-form">
+								<div class="input-group input-search">
+									<input type="text" class="form-control" name="q" id="q" placeholder="Search..." style="width:185px;">
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+									</span>
+								</div>						
+							</form>
+						</div>	
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								  <thead>
+								  	<tr>
+								  		<th><input type="checkbox" name=""></th>
+								  		<th>专家名字</th>
+								  		<th>专家类别</th>
+								  		<th>状态</th>
+								  		<th>专家介绍</th>
+								  		<th>
+								  			<div>团队成员</div>
+								  			<div>（名师工作室的需要编辑此列）</div>
+								  		</th>
+								  		<th>操作</th>
+								  	</tr>
+								  </thead>
+								  <tbody>
+								  	<tr>
+								  		<td><input type="checkbox" name=""></td>
+								  		<td>周妍</td>
+								  		<td>名师工作室</td>
+								  		<td class="norelease">未发布</td>
+								  		<td class="compile" name="compile.html">编辑</td>
+								  		<td class="team-members" name="team-members.html">编辑</td>
+								  		<td><a class="to-view">预览</a></td>
+								  	</tr>
+								  	<tr>
+								  		<td><input type="checkbox" name=""></td>
+								  		<td>周妍</td>
+								  		<td>名师工作室</td>
+								  		<td>发布</td>
+								  		<td class="compile" name="compile.html">编辑</td>
+								  		<td class="team-members" name="team-members.html">编辑</td>
+								  		<td><a class="to-view">预览</a></td>
+								  	</tr>
+								  	<tr>
+								  		<td><input type="checkbox" name=""></td>
+								  		<td>周妍</td>
+								  		<td>名师工作室</td>
+								  		<td>发布</td>
+								  		<td class="compile" name="compile.html">编辑</td>
+								  		<td class="team-members" name="team-members.html">编辑</td>
+								  		<td><a class="to-view">预览</a></td>
+								  	</tr>
+								  	<tr>
+								  		<td><input type="checkbox" name=""></td>
+								  		<td>周妍</td>
+								  		<td>名师工作室</td>
+								  		<td>发布</td>
+								  		<td class="compile" name="compile.html">编辑</td>
+								  		<td class="team-members" name="team-members.html">编辑</td>
+								  		<td><a class="to-view">预览</a></td>
+								  	</tr>
+								  </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <iframe frameborder="0" marginheight="0" marginwidth="0" border="0" id="btn-close-onebox" name="alimamaifrm" scrolling="yes" height="550px" width="100%" src=""></iframe> -->
+		<style type="text/css">
+			.team-members-box{display: none;}
+			.team-members-box .panel .panel-heading .panel-actions a{color:#fff;margin-right:20px;}
+			.team-members-box .table tbody img{max-height:80px;}
+			.team-members-box .imgbox{width:200px;height:200px;background:#f5f5f5;text-align: center;margin:0 auto;}
+			.team-members-box .imgbox div{padding-top:40px;}
+			.team-members-box .form-group{margin-top:20px;height:40px; }
+			.team-members-box .form-group label{line-height:34px;text-align: right;}
+		</style>
+		<div class="team-members-box">
+			<div class="row mask-prompt active-select">		
+				<div class="col-lg-12">
+					<div class="panel">
+						<div class="panel-heading bk-bg-primary">
+							<h6><i class="fa fa-table red"></i><span class="break"></span>编辑页面</h6>
+							<div class="panel-actions">
+								<a class="btn-setting">新增</a>
+								<a class="btn-minimize">删除</a>
+								<a class="btn-close" id="btn-close-one"><i class="fa fa-times"></i></a>
+							</div>
+						</div>
+						<div class="panel-body">	
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									  <thead>
+									  	<tr>
+									  		<th><input type="checkbox" name=""></th>
+									  		<th>教师姓名</th>
+									  		<th>教师头像</th>
+									  		<th>操作</th>
+									  	</tr>
+									  </thead>
+									  <tbody>
+									  	<tr>
+									  		<td><input type="checkbox" name=""></td>
+									  		<td>周妍</td>
+									  		<td><img src="img/avatar.jpg"></td>
+									  		<td><a class="to-view">编辑</a></td>
+									  	</tr>
+									  	<tr>
+									  		<td><input type="checkbox" name=""></td>
+									  		<td>周妍</td>
+									  		<td><img src="img/avatar.jpg"></td>
+									  		<td><a class="to-view">编辑</a></td>
+									  	</tr>
+									  	<tr>
+									  		<td><input type="checkbox" name=""></td>
+									  		<td>周妍</td>
+									  		<td><img src="img/avatar.jpg"></td>
+									  		<td><a class="to-view">编辑</a></td>
+									  	</tr>
+									  	<tr>
+									  		<td><input type="checkbox" name=""></td>
+									  		<td>周妍</td>
+									  		<td><img src="img/avatar.jpg"></td>
+									  		<td><a class="to-view">编辑</a></td>
+									  	</tr>
+									  </tbody>
+								</table>
+							</div>
+							<div class="row" style="text-align:center;margin-top:30px;">
+								<input type="button" class="btn btn-primary button-next pull-center" name="next" value="保存并发布">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style type="text/css">
+			.compile-box .panel .panel-heading .panel-actions a{color:#fff;margin-right:20px;}
+			.compile-box .panel-heading select{width:100px;border-radius:2px;padding:4px 5px;color:#515151;}
+			.compile-box .form-group{height:40px;}
+			.compile-box .form-group select{padding: 6px 12px;}
+			.compile-box .control-label{text-align:right;line-height:34px;}
+			.compile-box .upload-pictures .upload-pictures-box{width:100px;height:100px;background:#f5f5f5;font-size:40px;color:#ccc;line-height:100px;text-align: center;}
+		</style>
+		<div class="compile-box">
+			<div class="row mask-prompt active-select">		
+				<div class="col-lg-12">
+					<div class="panel">
+						<div class="panel-heading bk-bg-primary">
+							<h6><i class="fa fa-table red"></i><span class="break"></span>编辑页面</h6>
+							<div class="panel-actions">
+								<a href="" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>
+						</div>
+						<div class="panel-body">	
+							<div class="inform-responsive">
+								<div class="form-group" style="height:100px; ">
+									<div class="upload-pictures">
+										<label class="col-sm-3 control-label">上传专家图片</label>
+										<div class="col-sm-9">
+											<div class="upload-pictures-box">+</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">专家姓名</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="input-small">所属类别</label>
+									<div class="col-sm-9">
+										<select style="width:100%; ">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">单位头衔</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" maxlength="30">
+										<div>限30字以内</div>
+									</div> 
+
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">简介</label>
+									<div class="col-sm-9">
+										<textarea class="form-control" rows="3" maxlength="500"></textarea>
+										<div>限500字以内</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">历年成果</label>
+									<div class="col-sm-9">
+										<textarea class="form-control" rows="3" maxlength="500"></textarea>
+										<div>限500字以内</div>
+									</div>
+								</div>
+							</div>
+							<div class="row" style="text-align:right;margin-top:30px;">
+								<input type="button" class="btn btn-primary button-next pull-center" name="next" value="保存">
+								<input type="button" class="btn btn-primary button-next pull-center" name="next" value="保存并发布">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+			
+	<div class="clearfix"></div>
+	<style type="text/css">
+		iframe{display: none;}
+	</style>
+	<script src="mejs/jquery.min.js"></script>	
+	<script src="mejs/core.min.js"></script>
+	<script src="mejs/public.js"></script>
+	<script type="text/javascript">
+		$('.compile,.btn-setting').click(function(){
+			$('.row.row-compile').css('display','none');
+			$('iframe').css('display','block');
+			$('iframe').attr('src','compile.html');
+		})
+		$('.team-members').click(function(){
+			$('.row.row-compile').css('display','none');
+			$('.team-members-box').css('display','block');
+		})
+		$('#btn-close-one').click(function(){
+			$('.row.row-compile').css('display','block');
+			$('.team-members-box').css('display','none');
+		})
+		$('.team-members-box .btn-setting,.to-view').click(function(){
+			var html='<div class="imgbox">'
+						+'<div>上传教师图片</div>'
+						+'<div>支持png，jpg图片</div>'
+					+'</div>'
+					+'<div class="form-group">'
+						+'<label class="col-sm-3 control-label">教师姓名</label>'
+						+'<div class="col-sm-9">'
+							+'<input type="text" class="form-control">'
+						+'</div>'
+					+'</div>'
+					+'<div class="row" style="text-align:center;margin-top:30px;height:auto;">'
+						+'<input type="button" class="btn btn-primary button-next pull-center" name="next" value="保存">'
+					+'</div>';
+			maskbox('信息编辑',html);
+			$('.theme-mask .col-lg-12').css('width','60%');
+		});
+	</script>
+</body>	
+</html>
